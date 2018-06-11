@@ -1,21 +1,19 @@
-package com.stone.zxingscandemo
 
-import android.Manifest
-import android.app.Activity
-import android.content.Intent
-import android.content.pm.PackageManager
-import android.os.Bundle
-import android.support.v4.app.ActivityCompat
-import android.support.v4.content.ContextCompat
-import android.support.v7.app.AlertDialog
-import android.support.v7.app.AppCompatActivity
-import android.widget.Toast
-import com.google.zxing.client.android.CaptureActivity
-import com.google.zxing.client.android.Intents
-import kotlinx.android.synthetic.main.activity_main.*
-import org.jetbrains.anko.act
-import org.jetbrains.anko.longToast
+# ZxingScanDemo
 
+## 关于ZXing
+
+ZXing是Google提供的条形码、二维码等的生成、解析的开源库。
+
+[ZXing GitHub传送门](https://github.com/zxing/zxing)
+
+
+## 使用说明
+
+`zxing-android`将zxing的应用代码单独抽离出来了，内有`CaptureActivity`用以扫描二维码并解析出来。`HistoryActivity`扫描的历史记录。
+
+具体使用的参考代码：
+```kotlin
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -82,3 +80,21 @@ class MainActivity : AppCompatActivity() {
         private const val REQ_SCAN_CODE = 0x10
     }
 }
+```
+
+
+## 关于代码`zxing-android`
+
+模块`zxing-android`中的代码绝大部分都是`zxing`开源库中的`android`目录下的源码。是对zxing:core核心库的应用。
+
+备注：此部分的代码集成，是从`incubator-weex`中android模块的代码搬运过来的，其中的二维码就是拉取的`zxing`的源码，故此说明一下。
+
+[incubator-weex](https://github.com/apache/incubator-weex/tree/master/android)
+
+### 关于`incubator-weex`
+
+原阿里项目`weex`,现由Apache维护的跨平台开发技术。这里的`incubator-weex`是提供关于`weex`开发介绍预览等功能的一个APP源码`weex-playground`。
+
+
+
+
