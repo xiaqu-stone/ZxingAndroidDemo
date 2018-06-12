@@ -42,7 +42,7 @@ ext {
     libraryName = 'zxing-android'
     artifact = 'zxing-android'
 
-    libraryVersion = '1.0.0'
+    libraryVersion = '1.0.2'
 
     libraryDescription = '根据Zxing开源库中的源码，结合自身需求做的应用层的封装'
 

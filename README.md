@@ -11,8 +11,23 @@ ZXing是Google提供的条形码、二维码等的生成、解析的开源库。
 
 gradle
 ```
-implementation 'com.sqq.xiaqu:zxing-android:1.0.0'
+implementation 'com.sqq.xiaqu:zxing-android:1.0.2'
 ```
+
+### 关于FileProvider冲突
+
+如果自身项目中有使用FileProvider，可能会存在冲突，请做如下配置
+
+```xml
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            tools:replace="authorities">
+            <meta-data
+                tools:replace="android:resource"
+                android:name="android.support.FILE_PROVIDER_PATHS"/>
+        </provider>
+```
+
 
 ## 使用说明
 
