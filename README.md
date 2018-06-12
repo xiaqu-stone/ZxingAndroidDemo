@@ -11,7 +11,7 @@ ZXing是Google提供的条形码、二维码等的生成、解析的开源库。
 
 gradle
 ```
-implementation 'compile 'com.sqq.xiaqu:zxing-android:1.0.0'
+implementation 'com.sqq.xiaqu:zxing-android:1.0.0'
 ```
 
 ## 使用说明
