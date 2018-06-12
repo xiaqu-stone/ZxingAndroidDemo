@@ -33,3 +33,31 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
     implementation "com.google.zxing:core:3.3.3"
 }
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'zxing-android'
+
+    publishedGroupId = 'com.sqq.xiaqu'
+    libraryName = 'zxing-android'
+    artifact = 'zxing-android'
+
+    libraryVersion = '1.0.0'
+
+    libraryDescription = '根据Zxing开源库中的源码，结合自身需求做的应用层的封装'
+
+    siteUrl = 'https://github.com/xiaqu-stone'
+    gitUrl = 'https://github.com/xiaqu-stone/ZxingAndroidDemo.git'
+
+    developerId = 'stone'
+    developerName = 'xiaqu-stone'
+    developerEmail = 'stone.xiaqu@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+//远程文件依赖
+apply from: "https://raw.githubusercontent.com/xiaqu-stone/ComPro/master/install-v1.gradle"
+apply from: "https://raw.githubusercontent.com/xiaqu-stone/ComPro/master/bintray-v2.gradle"
